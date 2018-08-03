@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JKNavigationView" customModule="WeChatPraise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="267"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YI-M7-pjk">
+                    <rect key="frame" x="10" y="223" width="55" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="9XC-xA-2FJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="发现" image="back_b">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRB-qD-CAk">
+                    <rect key="frame" x="329" y="223" width="30" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="0Ve-OY-p2L"/>
+                        <constraint firstAttribute="height" constant="44" id="MEy-9e-E0K"/>
+                    </constraints>
+                    <state key="normal" image="photo_b"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="朋友圈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rq-58-Kv3">
+                    <rect key="frame" x="157" y="234" width="55.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nRB-qD-CAk" secondAttribute="bottom" id="3dR-ze-SH4"/>
+                <constraint firstItem="5Rq-58-Kv3" firstAttribute="centerY" secondItem="1YI-M7-pjk" secondAttribute="centerY" id="6Zy-vx-N4U"/>
+                <constraint firstItem="1YI-M7-pjk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="9ds-zk-7FB"/>
+                <constraint firstAttribute="trailing" secondItem="nRB-qD-CAk" secondAttribute="trailing" constant="10" id="Af3-Ip-iUu"/>
+                <constraint firstAttribute="bottom" secondItem="1YI-M7-pjk" secondAttribute="bottom" id="bOT-ge-04R"/>
+                <constraint firstItem="5Rq-58-Kv3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wbU-VW-LFi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftButton" destination="1YI-M7-pjk" id="wbr-e1-5TQ"/>
+                <outlet property="nameLabel" destination="5Rq-58-Kv3" id="WdC-ex-lEr"/>
+                <outlet property="rightButton" destination="nRB-qD-CAk" id="L4n-hY-hhg"/>
+            </connections>
+            <point key="canvasLocation" x="17.5" y="-142.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_b" width="24" height="24"/>
+        <image name="photo_b" width="24" height="24"/>
+    </resources>
+</document>

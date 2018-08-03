@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>likes</key>
+		<array/>
+		<key>likeName</key>
+		<string></string>
+		<key>comments</key>
+		<array>
+			<dict>
+				<key>commentsType</key>
+				<false/>
+				<key>plMsg</key>
+				<string></string>
+				<key>plNmae</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>time</key>
+		<string></string>
+		<key>msg_images</key>
+		<array/>
+		<key>icon</key>
+		<string></string>
+		<key>msg_text</key>
+		<string></string>
+		<key>name</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JKFriendHeaderView" customModule="WeChatPraise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="269"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic8" translatesAutoresizingMaskIntoConstraints="NO" id="Xjh-Yx-Cwy">
+                    <rect key="frame" x="0.0" y="-64" width="393" height="313"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQ7-3Y-aV5">
+                    <rect key="frame" x="319" y="201" width="68" height="68"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picon" translatesAutoresizingMaskIntoConstraints="NO" id="vIS-Pt-oXv">
+                            <rect key="frame" x="2" y="2" width="64" height="64"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="1Gf-G2-mRF"/>
+                        <constraint firstAttribute="bottom" secondItem="vIS-Pt-oXv" secondAttribute="bottom" constant="2" id="5qQ-mn-hGx"/>
+                        <constraint firstAttribute="trailing" secondItem="vIS-Pt-oXv" secondAttribute="trailing" constant="2" id="Ioa-w5-FtE"/>
+                        <constraint firstAttribute="width" constant="68" id="W5w-qS-ybn"/>
+                        <constraint firstItem="vIS-Pt-oXv" firstAttribute="leading" secondItem="bQ7-3Y-aV5" secondAttribute="leading" constant="2" id="fqs-s4-p70"/>
+                        <constraint firstItem="vIS-Pt-oXv" firstAttribute="top" secondItem="bQ7-3Y-aV5" secondAttribute="top" constant="2" id="xCC-qr-yb0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Xjh-Yx-Cwy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-64" id="0fh-Uy-flA"/>
+                <constraint firstItem="Xjh-Yx-Cwy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BZV-Nc-lyG"/>
+                <constraint firstAttribute="bottom" secondItem="bQ7-3Y-aV5" secondAttribute="bottom" id="hEa-89-mop"/>
+                <constraint firstAttribute="trailing" secondItem="Xjh-Yx-Cwy" secondAttribute="trailing" id="mEi-WI-RyY"/>
+                <constraint firstAttribute="trailing" secondItem="bQ7-3Y-aV5" secondAttribute="trailing" constant="6" id="pM3-9a-BZm"/>
+                <constraint firstAttribute="bottom" secondItem="Xjh-Yx-Cwy" secondAttribute="bottom" constant="20" id="xjQ-Xg-vvi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backImageView" destination="Xjh-Yx-Cwy" id="eXn-Ym-UDI"/>
+                <outlet property="photoImageView" destination="vIS-Pt-oXv" id="Pkq-cn-zP7"/>
+            </connections>
+            <point key="canvasLocation" x="11.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pic8" width="330" height="220"/>
+        <image name="picon" width="946" height="946"/>
+    </resources>
+</document>
