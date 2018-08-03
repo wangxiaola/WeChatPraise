@@ -11,6 +11,7 @@ import UIKit
 /// 朋友圈
 class JKFriendsTableViewController: UIViewController {
     
+    let cellIdentifier = "cellIdentifier"
     let tableView: UITableView  = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), style: UITableViewStyle.plain)
     
     let navView: JKNavigationView = JKNavigationView.loadNibClassView()
@@ -45,8 +46,14 @@ class JKFriendsTableViewController: UIViewController {
         self.view.addSubview(self.tableView)
         self.view.backgroundColor = tableBackColor
         self.tableView.backgroundColor = tableBackColor
-        self.tableView.tableHeaderView = self.headerView        
+        self.tableView.tableHeaderView = self.headerView
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.register(UINib.init(nibName: "JKFriendsTableViewCell", bundle: nil), forCellReuseIdentifier: self.cellIdentifier)
+        
         self.view.addSubview(self.navView)
+        
         
         
     }
@@ -56,8 +63,28 @@ class JKFriendsTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
+}
+   //MARK:- tableview代理
+extension JKFriendsTableViewController: UITableViewDataSource,UITableViewDelegate {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 12
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: JKFriendsTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier) as! JKFriendsTableViewCell
+        return cell
+    }
     
 }

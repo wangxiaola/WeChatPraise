@@ -20,6 +20,10 @@
 		3BBBB57421142FA80088AB10 /* JKFriendHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBB57321142FA80088AB10 /* JKFriendHeaderView.xib */; };
 		3BBBB5762114369B0088AB10 /* JKNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB5752114369B0088AB10 /* JKNavigationView.swift */; };
 		3BBBB578211436AA0088AB10 /* JKNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBB577211436AA0088AB10 /* JKNavigationView.xib */; };
+		3BBBB57B211447460088AB10 /* JKFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB579211447460088AB10 /* JKFriendsTableViewCell.swift */; };
+		3BBBB57C211447460088AB10 /* JKFriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BBBB57A211447460088AB10 /* JKFriendsTableViewCell.xib */; };
+		3BBBB57F211447780088AB10 /* JKFriendsListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB57E211447780088AB10 /* JKFriendsListMode.swift */; };
+		3BBBB582211447970088AB10 /* JKFriendsViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBBB581211447970088AB10 /* JKFriendsViewMode.swift */; };
 		3BCA3A7B2111477300ABA286 /* JKHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA3A7A2111477300ABA286 /* JKHomeViewController.swift */; };
 		3BCA3A8321117F6D00ABA286 /* homeData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BCA3A8221117F6D00ABA286 /* homeData.plist */; };
 		3BCA3A8721118E1700ABA286 /* JKHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCA3A8521118E1700ABA286 /* JKHomeTableViewCell.swift */; };
@@ -50,6 +54,10 @@
 		3BBBB57321142FA80088AB10 /* JKFriendHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JKFriendHeaderView.xib; sourceTree = "<group>"; };
 		3BBBB5752114369B0088AB10 /* JKNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKNavigationView.swift; sourceTree = "<group>"; };
 		3BBBB577211436AA0088AB10 /* JKNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JKNavigationView.xib; sourceTree = "<group>"; };
+		3BBBB579211447460088AB10 /* JKFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFriendsTableViewCell.swift; sourceTree = "<group>"; };
+		3BBBB57A211447460088AB10 /* JKFriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JKFriendsTableViewCell.xib; sourceTree = "<group>"; };
+		3BBBB57E211447780088AB10 /* JKFriendsListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFriendsListMode.swift; sourceTree = "<group>"; };
+		3BBBB581211447970088AB10 /* JKFriendsViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKFriendsViewMode.swift; sourceTree = "<group>"; };
 		3BCA3A7A2111477300ABA286 /* JKHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKHomeViewController.swift; sourceTree = "<group>"; };
 		3BCA3A8221117F6D00ABA286 /* homeData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = homeData.plist; sourceTree = "<group>"; };
 		3BCA3A8521118E1700ABA286 /* JKHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKHomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -141,9 +149,27 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		3BBBB57D2114475E0088AB10 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+				3BBBB57E211447780088AB10 /* JKFriendsListMode.swift */,
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		3BBBB580211447860088AB10 /* viewMode */ = {
+			isa = PBXGroup;
+			children = (
+				3BBBB581211447970088AB10 /* JKFriendsViewMode.swift */,
+			);
+			path = viewMode;
+			sourceTree = "<group>";
+		};
 		3BCA3A772111472300ABA286 /* class */ = {
 			isa = PBXGroup;
 			children = (
+				3BBBB580211447860088AB10 /* viewMode */,
+				3BBBB57D2114475E0088AB10 /* mode */,
 				3BCA3A792111475B00ABA286 /* views */,
 				3BCA3A782111474900ABA286 /* controller */,
 			);
@@ -180,6 +206,8 @@
 				3BF4B60C2112B3F1006ADFF3 /* JKBookTableViewCell.xib */,
 				3BF4B61D2112F346006ADFF3 /* JKMeHeaderTableViewCell.swift */,
 				3BF4B61E2112F346006ADFF3 /* JKMeHeaderTableViewCell.xib */,
+				3BBBB579211447460088AB10 /* JKFriendsTableViewCell.swift */,
+				3BBBB57A211447460088AB10 /* JKFriendsTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -263,6 +291,7 @@
 			files = (
 				3BBBB57421142FA80088AB10 /* JKFriendHeaderView.xib in Resources */,
 				3BF4B60E2112B3F1006ADFF3 /* JKBookTableViewCell.xib in Resources */,
+				3BBBB57C211447460088AB10 /* JKFriendsTableViewCell.xib in Resources */,
 				3BCA3A8321117F6D00ABA286 /* homeData.plist in Resources */,
 				3BCA3A8821118E1700ABA286 /* JKHomeTableViewCell.xib in Resources */,
 				3B46DFFA210EB76C00DA4023 /* Assets.xcassets in Resources */,
@@ -342,11 +371,14 @@
 				3BF4B6132112D407006ADFF3 /* JKMeViewController.swift in Sources */,
 				3BCA3A7B2111477300ABA286 /* JKHomeViewController.swift in Sources */,
 				3BBBB57221142F940088AB10 /* JKFriendHeaderView.swift in Sources */,
+				3BBBB57F211447780088AB10 /* JKFriendsListMode.swift in Sources */,
+				3BBBB582211447970088AB10 /* JKFriendsViewMode.swift in Sources */,
 				3BB571082110663900415350 /* JKUserInfo.swift in Sources */,
 				3B46DFF3210EB76600DA4023 /* AppDelegate.swift in Sources */,
 				3B0A6EC2210F009600AC357C /* swift-pch.swift in Sources */,
 				3BF4B6172112D420006ADFF3 /* JKFoundViewController.swift in Sources */,
 				3B0A6EC5210F049200AC357C /* JKNavigationViewController.swift in Sources */,
+				3BBBB57B211447460088AB10 /* JKFriendsTableViewCell.swift in Sources */,
 				3B0A6EBE210EF3D600AC357C /* JKUserSetViewController.swift in Sources */,
 				3BBBB56921140AE10088AB10 /* JKFriendsTableViewController.swift in Sources */,
 				3BF4B60D2112B3F1006ADFF3 /* JKBookTableViewCell.swift in Sources */,
