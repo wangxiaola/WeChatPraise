@@ -10,9 +10,25 @@ import UIKit
 
 class JKFriendsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet weak var headerNameLabel: UILabel!
+    @IBOutlet weak var headerMsgLabel: UILabel!
+    @IBOutlet weak var contenView: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var clickMsdButton: UIButton!
+    @IBOutlet weak var bottomView: UIView!
+    
+    @IBOutlet weak var bottomViewHeigheValue: NSLayoutConstraint!
+    @IBOutlet weak var contenViewHeightValue: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.bottomViewHeigheValue.constant = 100.0
+        self.contenViewHeightValue.constant = 0.0
+        
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

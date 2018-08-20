@@ -23,7 +23,6 @@ class JKMeViewController: UITableViewController {
                       ["image":"MyCardPackageIcon","name":"卡包"],
                       ["image":"MoreExpressionShops","name":"表情"]])
         listData.add([["image":"MoreSetting","name":"设置"]])
-        
 
         self.tableView.sectionHeaderHeight = 10
         self.tableView.sectionFooterHeight = 10
@@ -69,7 +68,6 @@ class JKMeViewController: UITableViewController {
         
         let list:[Any] = self.listData[indexPath.section] as! [Any]
         let data: [String: String] = list[indexPath.row] as! [String : String]
-        cell.nameLabel.font = UIFont.systemFont(ofSize: 15)
         cell.nameLabel.text = data["name"]
         cell.headerImage.image = UIImage.init(named: data["image"]!)
         

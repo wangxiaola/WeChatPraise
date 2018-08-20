@@ -12,7 +12,10 @@ import UIKit
 class JKFriendsTableViewController: UIViewController {
     
     let cellIdentifier = "cellIdentifier"
+    var offsetDfState = true // 是否是默认状态
+    
     let tableView: UITableView  = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), style: UITableViewStyle.plain)
+    
     
     let navView: JKNavigationView = JKNavigationView.loadNibClassView()
     let headerView: JKFriendHeaderView = JKFriendHeaderView.loadNibClassView()
@@ -29,7 +32,6 @@ class JKFriendsTableViewController: UIViewController {
         super.viewDidLoad()
         
         self.setViewsUI()
-        
         
         
     }
@@ -54,8 +56,6 @@ class JKFriendsTableViewController: UIViewController {
         
         self.view.addSubview(self.navView)
         
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +64,7 @@ class JKFriendsTableViewController: UIViewController {
     }
     
 }
-   //MARK:- tableview代理
+//MARK:- tableview代理
 extension JKFriendsTableViewController: UITableViewDataSource,UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -77,14 +77,37 @@ extension JKFriendsTableViewController: UITableViewDataSource,UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    
-        return 100
+        
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: JKFriendsTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellIdentifier) as! JKFriendsTableViewCell
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    /// 导航栏监听
+    ///
+    /// - Parameter scrollView: scrollView
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
+        
+        let offset = scrollView.contentOffset.y
+        // 判读偏移量
+        if offset >= headerHeight && self.offsetDfState == true {
+            
+            self.offsetDfState = false
+            self.navView.setNavGationState(isDefault: false )
+        }
+        else if offset < headerHeight && self.offsetDfState == false {
+            self.offsetDfState = true
+            self.navView.setNavGationState(isDefault: true )
+        }
     }
     
 }

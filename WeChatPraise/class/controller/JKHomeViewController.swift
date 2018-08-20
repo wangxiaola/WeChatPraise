@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 class JKHomeViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class JKHomeViewController: UIViewController {
         self.setTableViewType()
         self.dataLoad()
         self.setUpViews()
+        
 
     }
     // 设置视图

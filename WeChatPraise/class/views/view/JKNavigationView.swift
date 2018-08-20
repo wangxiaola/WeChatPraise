@@ -43,5 +43,7 @@ class JKNavigationView: UIView {
         self.leftButton.setTitleColor(textColor, for: .normal)
         self.leftButton.setImage(UIImage.init(named: imageLeftName), for: .normal)
         self.rightButton.setImage(UIImage.init(named: imageRightName), for: .normal)
+        // 设置状态栏
+        UIApplication.shared.statusBarStyle = isDefault ? .lightContent:.default
     }
 }
